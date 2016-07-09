@@ -15,7 +15,9 @@ var reverseVowels = function(s) {
     var r = s.length-1;
     while (l <= r)
     {
-        if (vowel.indexOf(s[l]) != -1 && vowel.indexOf(s[r]) != -1)
+        var indl = vowel.indexOf(s[l]);
+        var indr = vowel.indexOf(s[r]);
+        if (indl != -1 && indr != -1)
         {
             var temp = s[l];
             s = s.replaceAt(l, s[r]);
@@ -23,9 +25,9 @@ var reverseVowels = function(s) {
             l += 1;
             r -= 1;
         }
-        else if (vowel.indexOf(s[l]) == -1 && vowel.indexOf(s[r]) != -1)
+        else if (indl == -1 && indr != -1)
             l += 1;
-        else if (vowel.indexOf(s[l]) != -1 && vowel.indexOf(s[r]) == -1)
+        else if (indl != -1 && indr == -1)
             r -= 1;
         else
         {
