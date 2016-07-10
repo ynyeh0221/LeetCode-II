@@ -13,9 +13,7 @@ class Solution(object):
         """
         if not root:
             return True
-        p = root.left
-        q = root.right
-        return self.helper(p, q)
+        return self.helper(root.left, root.right)
     
     def helper(self, p, q):
         if not p and not q:
