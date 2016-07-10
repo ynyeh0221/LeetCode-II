@@ -12,9 +12,7 @@
 var isSymmetric = function(root) {
     if (root === null)
         return true;
-    var p = root.left;
-    var q = root.right;
-    return helper(p, q);
+    return helper(root.left, root.right);
 };
 
 var helper = function(p, q)
