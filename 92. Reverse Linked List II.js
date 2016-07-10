@@ -33,4 +33,5 @@ var reverseBetween = function(head, m, n) {
         nextnode = temp;
     }
     reverse_end.next = head;
-   
+    return dummy.next;
+};
