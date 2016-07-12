@@ -5,8 +5,8 @@ class Solution(object):
         :rtype: bool
         """
         max_achieve = 0
-        for i in xrange(len(nums)):
+        for i in xrange(len(nums)-1):
             max_achieve = max(max_achieve, i + nums[i])
-            if i < len(nums)-1 and max_achieve < i+1:
+            if max_achieve < i+1:
                 return False
         return True
