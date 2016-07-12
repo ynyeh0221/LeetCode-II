@@ -9,10 +9,7 @@ class Solution(object):
         while i < n:
             if nums[i] == 0:
                 temp = nums.pop(i)
-                if nums:
-                    nums.insert(0,temp)
-                else:
-                    nums += [temp]
+                nums.insert(0,temp)
             elif nums[i] == 2:
                 temp = nums.pop(i)
                 nums.append(temp)
