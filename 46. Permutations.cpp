@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
         vector <int> visited (nums.size(), false);
         vector<vector<int>> res;
         DFS(res, {}, nums, visited);
