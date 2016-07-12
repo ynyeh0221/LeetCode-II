@@ -7,14 +7,11 @@ class Solution(object):
         n = len(nums)
         if n == 0:
             return 0
-        T = [0 for i in xrange(n)]
-        T[0] = 1
+        T = [1 for i in xrange(n)]
         res = 1
         for i in xrange(1, n):
-            temp = 1
             for j in xrange(i):
                 if nums[i] > nums[j]:
-                    temp = max(temp, T[j] + 1)
-            T[i] = temp
+                    T[i] = max(T[i], T[j] + 1)
             res = max(T[i], res)
         return res
