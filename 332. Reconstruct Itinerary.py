@@ -15,7 +15,6 @@ class Solution(object):
             visited[ticket[0]] += [False]
         for key in from_to.keys():
             from_to[key] = sorted(from_to[key])
-        print from_to
         self.res = []
         self.DFS(['JFK'], 'JFK', from_to, visited)
         return self.res
