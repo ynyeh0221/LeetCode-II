@@ -15,9 +15,8 @@ class Solution(object):
             res += [path[:]]
             return
         for i in xrange(len(nums)):
-            if i > 0 and nums[i] == nums[i-1] and not visited[i-1]:
+            if visited[i] or (i > 0 and nums[i] == nums[i-1] and not visited[i-1]):
                 continue
-            if not visited[i]:
-                visited[i] = True
-                self.DFS(res, path + [nums[i]], nums, visited)
-                visited[i] = False
+            visited[i] = True
+            self.DFS(res, path + [nums[i]], nums, visited)
+            visited[i] = False
