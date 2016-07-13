@@ -12,6 +12,7 @@ class Solution(object):
                 count += j & bit
             if count % 3 != 0:
                 res += bit
-        if res >= 2 ** 31:
-            res -= 2 ** 32
+        maxint = 2 ** 31
+        if res >= maxint:
+            res -= 2 * maxint
         return res
