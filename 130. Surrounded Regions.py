@@ -18,7 +18,7 @@ class Solution(object):
                     elif board[i][j] == '*':
                         board[i][j] = 'O'
         
-    def DFS(self, i, j, board):
+    def BFS(self, i, j, board):
         queue = [(i,j)]
         while queue:
             (x, y) = queue.pop(0)
