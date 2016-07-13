@@ -21,7 +21,7 @@ class Solution(object):
                 root = root.left
                 res += [root.val]
             root = stack.pop()
-            if root and root.right:
+            if root.right:
                 stack += [root.right]
             root = root.right
             if root:
