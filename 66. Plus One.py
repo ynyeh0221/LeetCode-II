@@ -12,5 +12,4 @@ class Solution(object):
                 return digits
             else:
                 digits[i] = temp - 10
-                en = 1
-        return digits if en == 0 else [1] + digits
+        return [1] + digits
