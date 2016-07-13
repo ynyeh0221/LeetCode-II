@@ -1,3 +1,4 @@
+from random import randint
 class Solution(object):
     def findKthLargest(self, nums, k):
         """
@@ -8,7 +9,7 @@ class Solution(object):
         return self.helper(nums, len(nums) - k + 1)
         
     def helper(self, nums, k):
-        pivot = nums[0]
+        pivot = nums[randint(0, len(nums)-1)]
         less = []
         equal = []
         larger = []
