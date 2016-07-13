@@ -23,7 +23,7 @@ var preorderTraversal = function(root) {
             res.push(root.val);
         }
         root = stack.pop();
-        if (root !== null && root.right !== null)
+        if (root.right !== null)
             stack.push(root.right);
         root = root.right;
         if (root !== null)
