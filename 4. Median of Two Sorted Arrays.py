@@ -10,9 +10,7 @@ class Solution(object):
         if len(total) % 2 != 0:
             return self.median(total, len(total)/2+1)
         else:
-            l = self.median(total, len(total)/2)
-            r = self.median(total, len(total)/2+1)
-            return (l + r) / float(2)
+            return (self.median(total, len(total)/2) + self.median(total, len(total)/2+1)) / float(2)
         
     def median(self, nums, k):
         pivot = nums[random.randint(0, len(nums)-1)]
