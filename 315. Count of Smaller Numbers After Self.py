@@ -19,20 +19,20 @@ class Solution(object):
             res += [self.insert(root, nums[i])];
         return res[::-1]
     
-    def insert(self, root, t):
+    def insert(self, root, x):
         count = 0
         while True:
-            if t <= root.val:
+            if x <= root.val:
                 root.count += 1
                 if not root.left:
-                    root.left = TreeNode(t)           
+                    root.left = TreeNode(x)           
                     break
                 else:
                     root = root.left
             else:
                 count += root.count
                 if not root.right:
-                    root.right = TreeNode(t)           
+                    root.right = TreeNode(x)           
                     break
                 else:
                     root = root.right
