@@ -11,7 +11,7 @@ class Solution(object):
         self.matrix = matrix
         self.n = len(matrix)
         self.m = len(matrix[0])
-        self.res = 0
+        self.res = 1
         for i in xrange(self.n):
             for j in xrange(self.m):
                 visited = [[False for k in xrange(self.m)] for l in xrange(self.n)]
