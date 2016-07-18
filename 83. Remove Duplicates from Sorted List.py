@@ -14,9 +14,8 @@ class Solution(object):
             return []
         dummy = head
         p = dummy
-        head = head.next
         while head:
-            if head.val > p.val:
+            if p.val != head.val:
                 p.next = head
                 p = p.next
             head = head.next
