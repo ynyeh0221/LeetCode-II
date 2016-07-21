@@ -12,17 +12,8 @@ class Solution(object):
         for i in xrange(1, len(nums)):
             for j in xrange(i):
                 if nums[i] != nums[j]:
-                    if diff[j] == 0:
+                    if diff[j] == 0 or (diff[j] > 0 and nums[i] < nums[j]) or (diff[j] < 0 and nums[i] > nums[j]):
                         T[i] = max(T[i], T[j] + 1)
-                        if nums[i] > nums[j]:
-                            diff[i] = 1
-                        else:
-                            diff[i] = -1
-                    elif diff[j] == 1 and nums[i] < nums[j]:
-                        T[i] = max(T[i], T[j] + 1)
-                        diff[i] = -1
-                    elif diff[j] == -1 and nums[i] > nums[j]:
-                        T[i] = max(T[i], T[j] + 1)
-                        diff[i] = 1
+                        diff[i] = nums[i] - nums[j]
             res = max(res, T[i])
         return res
