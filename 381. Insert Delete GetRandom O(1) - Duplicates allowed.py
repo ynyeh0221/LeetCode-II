@@ -41,9 +41,7 @@ class RandomizedCollection(object):
             else:
                 del self.uni[val]
                 del self.rem[val]
-                return False
-        else:
-            return False
+        return False
 
     def getRandom(self):
         """
